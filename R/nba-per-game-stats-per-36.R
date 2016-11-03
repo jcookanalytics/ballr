@@ -22,7 +22,7 @@ NBAPerGameStatisticsPer36Min <- function(season = 2016) {
                    sep = "")
   pg <- read_html(nba_url)
 
-  nba_stats <- tbl_df(rvest::html_table(pg, fill = T)[[2]])
+  nba_stats <- tbl_df(rvest::html_table(pg, fill = T)[[1]])
   names(nba_stats)[c(11, 14, 17, 18, 21)] <- c("FGP",
                                                "3PP",
                                                "2PP",
